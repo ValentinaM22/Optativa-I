@@ -20,6 +20,7 @@ namespace EjerciciosCSharp
                 switch (opcion)
                 {
                     case "1": Ejercicio1_PositivePower(); break;
+                    case "2": Ejercicio2_DoubleOrTriple(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -100,6 +101,24 @@ namespace EjerciciosCSharp
             else
             {
                 Console.WriteLine("Resultado: Número negativo.");
+            }
+        }
+
+        // 2. Double or Triple
+        // Si el primer número es mayor o igual al segundo, devuelve su doble;
+        // de lo contrario devuelve el triple del segundo.
+        static void Ejercicio2_DoubleOrTriple()
+        {
+            double a = LeerDouble("Ingrese el primer número: ");
+            double b = LeerDouble("Ingrese el segundo número: ");
+
+            if (a >= b)
+            {
+                Console.WriteLine($"Resultado: {a * 2}");
+            }
+            else
+            {
+                Console.WriteLine($"Resultado: {b * 3}");
             }
         }
     }
