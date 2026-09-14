@@ -22,6 +22,7 @@ namespace EjerciciosCSharp
                     case "1": Ejercicio1_PositivePower(); break;
                     case "2": Ejercicio2_DoubleOrTriple(); break;
                     case "3": Ejercicio3_RootOrSquare(); break;
+                    case "4": Ejercicio4_CirclePerimeter(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -137,6 +138,16 @@ namespace EjerciciosCSharp
             {
                 Console.WriteLine($"Resultado: {numero * numero}");
             }
+        }
+
+        // 4. Circle Perimeter
+        // Calcula el perímetro (circunferencia) de un círculo a partir del radio.
+        static void Ejercicio4_CirclePerimeter()
+        {
+            double radio = LeerDouble("Ingrese el radio del círculo: ");
+            double perimetro = 2 * Math.PI * radio;
+
+            Console.WriteLine($"Resultado: {Math.Round(perimetro, 2)}");
         }
     }
 }
