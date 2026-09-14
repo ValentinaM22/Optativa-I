@@ -25,6 +25,7 @@ namespace EjerciciosCSharp
                     case "4": Ejercicio4_CirclePerimeter(); break;
                     case "5": Ejercicio5_MidweekDay(); break;
                     case "6": Ejercicio6_TaxCalculator(); break;
+                    case "7": Ejercicio7_RemainderFinder(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -184,6 +185,22 @@ namespace EjerciciosCSharp
             {
                 Console.WriteLine("Resultado: No debe impuestos.");
             }
+        }
+
+        // 7. Remainder Finder
+        // Muestra el residuo de la división del primer número entre el segundo.
+        static void Ejercicio7_RemainderFinder()
+        {
+            int a = LeerEntero("Ingrese el primer número: ");
+            int b = LeerEntero("Ingrese el segundo número: ");
+
+            if (b == 0)
+            {
+                Console.WriteLine("Resultado: No se puede dividir entre 0.");
+                return;
+            }
+
+            Console.WriteLine($"Resultado: {a % b}");
         }
     }
 }
