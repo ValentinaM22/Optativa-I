@@ -32,6 +32,7 @@ namespace EjerciciosCSharp
                     case "11": Ejercicio11_AverageOfFour(); break;
                     case "12": Ejercicio12_SmallestOfFive(); break;
                     case "13": Ejercicio13_VowelCounter(); break;
+                    case "14": Ejercicio14_FactorialFinder(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -335,6 +336,27 @@ namespace EjerciciosCSharp
             }
 
             Console.WriteLine($"Resultado: {contador}");
+        }
+
+        // 14. Factorial Finder
+        // Pide un número y calcula su factorial.
+        static void Ejercicio14_FactorialFinder()
+        {
+            int numero = LeerEntero("Ingrese un número: ");
+
+            if (numero < 0)
+            {
+                Console.WriteLine("Resultado: El factorial no está definido para negativos.");
+                return;
+            }
+
+            long factorial = 1;
+            for (int i = 2; i <= numero; i++)
+            {
+                factorial *= i;
+            }
+
+            Console.WriteLine($"Resultado: {factorial}");
         }
     }
 }
