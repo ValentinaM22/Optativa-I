@@ -28,6 +28,7 @@ namespace EjerciciosCSharp
                     case "7": Ejercicio7_RemainderFinder(); break;
                     case "8": Ejercicio8_SumOfEvens(); break;
                     case "9": Ejercicio9_FractionDifference(); break;
+                    case "10": Ejercicio10_StringLength(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -273,6 +274,16 @@ namespace EjerciciosCSharp
                 a = temp;
             }
             return a == 0 ? 1 : a;
+        }
+
+        // 10. String Length
+        // Muestra la longitud de una palabra ingresada por el usuario.
+        static void Ejercicio10_StringLength()
+        {
+            Console.Write("Ingrese una palabra: ");
+            string palabra = Console.ReadLine() ?? string.Empty;
+
+            Console.WriteLine($"Resultado: {palabra.Length}");
         }
     }
 }
