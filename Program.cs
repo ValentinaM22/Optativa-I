@@ -31,6 +31,7 @@ namespace EjerciciosCSharp
                     case "10": Ejercicio10_StringLength(); break;
                     case "11": Ejercicio11_AverageOfFour(); break;
                     case "12": Ejercicio12_SmallestOfFive(); break;
+                    case "13": Ejercicio13_VowelCounter(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -313,6 +314,27 @@ namespace EjerciciosCSharp
 
             double menor = Math.Min(n1, Math.Min(n2, Math.Min(n3, Math.Min(n4, n5))));
             Console.WriteLine($"Resultado: {menor}");
+        }
+
+        // 13. Vowel Counter
+        // Pide una palabra y cuenta el número de vocales que contiene.
+        static void Ejercicio13_VowelCounter()
+        {
+            Console.Write("Ingrese una palabra: ");
+            string palabra = (Console.ReadLine() ?? string.Empty).ToLower();
+
+            int contador = 0;
+            string vocales = "aeiouáéíóú";
+
+            foreach (char c in palabra)
+            {
+                if (vocales.Contains(c))
+                {
+                    contador++;
+                }
+            }
+
+            Console.WriteLine($"Resultado: {contador}");
         }
     }
 }
