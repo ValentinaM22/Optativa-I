@@ -23,6 +23,7 @@ namespace EjerciciosCSharp
                     case "2": Ejercicio2_DoubleOrTriple(); break;
                     case "3": Ejercicio3_RootOrSquare(); break;
                     case "4": Ejercicio4_CirclePerimeter(); break;
+                    case "5": Ejercicio5_MidweekDay(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -148,6 +149,23 @@ namespace EjerciciosCSharp
             double perimetro = 2 * Math.PI * radio;
 
             Console.WriteLine($"Resultado: {Math.Round(perimetro, 2)}");
+        }
+
+        // 5. Midweek Day
+        // Muestra el día de la semana correspondiente, solo para días laborables (1-5).
+        static void Ejercicio5_MidweekDay()
+        {
+            int dia = LeerEntero("Ingrese un número entre 1 y 7: ");
+
+            switch (dia)
+            {
+                case 1: Console.WriteLine("Resultado: Lunes"); break;
+                case 2: Console.WriteLine("Resultado: Martes"); break;
+                case 3: Console.WriteLine("Resultado: Miércoles"); break;
+                case 4: Console.WriteLine("Resultado: Jueves"); break;
+                case 5: Console.WriteLine("Resultado: Viernes"); break;
+                default: Console.WriteLine("Resultado: Número fuera del rango laboral."); break;
+            }
         }
     }
 }
