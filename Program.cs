@@ -24,6 +24,7 @@ namespace EjerciciosCSharp
                     case "3": Ejercicio3_RootOrSquare(); break;
                     case "4": Ejercicio4_CirclePerimeter(); break;
                     case "5": Ejercicio5_MidweekDay(); break;
+                    case "6": Ejercicio6_TaxCalculator(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -165,6 +166,23 @@ namespace EjerciciosCSharp
                 case 4: Console.WriteLine("Resultado: Jueves"); break;
                 case 5: Console.WriteLine("Resultado: Viernes"); break;
                 default: Console.WriteLine("Resultado: Número fuera del rango laboral."); break;
+            }
+        }
+
+        // 6. Tax Calculator
+        // Si el salario anual excede 12000, calcula el 15% del excedente como impuesto.
+        static void Ejercicio6_TaxCalculator()
+        {
+            double salario = LeerDouble("Ingrese su salario anual: ");
+
+            if (salario > 12000)
+            {
+                double impuesto = (salario - 12000) * 0.15;
+                Console.WriteLine($"Resultado: {impuesto}");
+            }
+            else
+            {
+                Console.WriteLine("Resultado: No debe impuestos.");
             }
         }
     }
