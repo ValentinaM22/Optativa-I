@@ -21,6 +21,7 @@ namespace EjerciciosCSharp
                 {
                     case "1": Ejercicio1_PositivePower(); break;
                     case "2": Ejercicio2_DoubleOrTriple(); break;
+                    case "3": Ejercicio3_RootOrSquare(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -119,6 +120,22 @@ namespace EjerciciosCSharp
             else
             {
                 Console.WriteLine($"Resultado: {b * 3}");
+            }
+        }
+
+        // 3. Root or Square
+        // Si el número es positivo devuelve su raíz cuadrada, si no, su cuadrado.
+        static void Ejercicio3_RootOrSquare()
+        {
+            double numero = LeerDouble("Ingrese un número: ");
+
+            if (numero > 0)
+            {
+                Console.WriteLine($"Resultado: {Math.Sqrt(numero)}");
+            }
+            else
+            {
+                Console.WriteLine($"Resultado: {numero * numero}");
             }
         }
     }
