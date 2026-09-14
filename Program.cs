@@ -26,6 +26,7 @@ namespace EjerciciosCSharp
                     case "5": Ejercicio5_MidweekDay(); break;
                     case "6": Ejercicio6_TaxCalculator(); break;
                     case "7": Ejercicio7_RemainderFinder(); break;
+                    case "8": Ejercicio8_SumOfEvens(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -201,6 +202,22 @@ namespace EjerciciosCSharp
             }
 
             Console.WriteLine($"Resultado: {a % b}");
+        }
+
+        // 8. Sum of Evens
+        // Calcula la suma de los números pares entre 1 y 50.
+        static void Ejercicio8_SumOfEvens()
+        {
+            int suma = 0;
+            for (int i = 1; i <= 50; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    suma += i;
+                }
+            }
+
+            Console.WriteLine($"Resultado: {suma}");
         }
     }
 }
