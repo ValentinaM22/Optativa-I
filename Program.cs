@@ -33,6 +33,7 @@ namespace EjerciciosCSharp
                     case "12": Ejercicio12_SmallestOfFive(); break;
                     case "13": Ejercicio13_VowelCounter(); break;
                     case "14": Ejercicio14_FactorialFinder(); break;
+                    case "15": Ejercicio15_InRangeValidator(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -357,6 +358,22 @@ namespace EjerciciosCSharp
             }
 
             Console.WriteLine($"Resultado: {factorial}");
+        }
+
+        // 15. InRange Validator
+        // Verifica si un número está en el rango de 10 a 20 (ambos incluidos).
+        static void Ejercicio15_InRangeValidator()
+        {
+            int numero = LeerEntero("Ingrese un número: ");
+
+            if (numero >= 10 && numero <= 20)
+            {
+                Console.WriteLine("Resultado: Está en el rango.");
+            }
+            else
+            {
+                Console.WriteLine("Resultado: Fuera del rango.");
+            }
         }
     }
 }
