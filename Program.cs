@@ -27,6 +27,7 @@ namespace EjerciciosCSharp
                     case "6": Ejercicio6_TaxCalculator(); break;
                     case "7": Ejercicio7_RemainderFinder(); break;
                     case "8": Ejercicio8_SumOfEvens(); break;
+                    case "9": Ejercicio9_FractionDifference(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -218,6 +219,60 @@ namespace EjerciciosCSharp
             }
 
             Console.WriteLine($"Resultado: {suma}");
+        }
+
+        // 9. Fraction Difference
+        // Pide dos fracciones (numerador/denominador cada una) y muestra su diferencia
+        // simplificada.
+        static void Ejercicio9_FractionDifference()
+        {
+            Console.WriteLine("Primera fracción:");
+            int num1 = LeerEntero("  Numerador: ");
+            int den1 = LeerEntero("  Denominador: ");
+
+            Console.WriteLine("Segunda fracción:");
+            int num2 = LeerEntero("  Numerador: ");
+            int den2 = LeerEntero("  Denominador: ");
+
+            if (den1 == 0 || den2 == 0)
+            {
+                Console.WriteLine("Resultado: El denominador no puede ser 0.");
+                return;
+            }
+
+            // (num1/den1) - (num2/den2) = (num1*den2 - num2*den1) / (den1*den2)
+            int numResultado = num1 * den2 - num2 * den1;
+            int denResultado = den1 * den2;
+
+            if (numResultado == 0)
+            {
+                Console.WriteLine("Resultado: 0");
+                return;
+            }
+
+            int divisor = MaximoComunDivisor(Math.Abs(numResultado), Math.Abs(denResultado));
+            numResultado /= divisor;
+            denResultado /= divisor;
+
+            // Mantener el signo negativo en el numerador, no en el denominador.
+            if (denResultado < 0)
+            {
+                denResultado = -denResultado;
+                numResultado = -numResultado;
+            }
+
+            Console.WriteLine($"Resultado: {numResultado}/{denResultado}");
+        }
+
+        static int MaximoComunDivisor(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a == 0 ? 1 : a;
         }
     }
 }
