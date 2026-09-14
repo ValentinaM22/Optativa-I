@@ -29,6 +29,7 @@ namespace EjerciciosCSharp
                     case "8": Ejercicio8_SumOfEvens(); break;
                     case "9": Ejercicio9_FractionDifference(); break;
                     case "10": Ejercicio10_StringLength(); break;
+                    case "11": Ejercicio11_AverageOfFour(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -284,6 +285,19 @@ namespace EjerciciosCSharp
             string palabra = Console.ReadLine() ?? string.Empty;
 
             Console.WriteLine($"Resultado: {palabra.Length}");
+        }
+
+        // 11. Average of Four
+        // Pide cuatro números y muestra su promedio.
+        static void Ejercicio11_AverageOfFour()
+        {
+            double n1 = LeerDouble("Ingrese el primer número: ");
+            double n2 = LeerDouble("Ingrese el segundo número: ");
+            double n3 = LeerDouble("Ingrese el tercer número: ");
+            double n4 = LeerDouble("Ingrese el cuarto número: ");
+
+            double promedio = (n1 + n2 + n3 + n4) / 4;
+            Console.WriteLine($"Resultado: {promedio}");
         }
     }
 }
