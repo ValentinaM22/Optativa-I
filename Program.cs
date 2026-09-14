@@ -19,6 +19,7 @@ namespace EjerciciosCSharp
 
                 switch (opcion)
                 {
+                    case "1": Ejercicio1_PositivePower(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -84,6 +85,22 @@ namespace EjerciciosCSharp
                 Console.Write("Entrada inválida. Ingrese un número: ");
             }
             return valor;
+        }
+
+        // 1. Positive Power
+        // Pide un número y lo eleva al cuadrado solo si es positivo (o cero).
+        static void Ejercicio1_PositivePower()
+        {
+            double numero = LeerDouble("Ingrese un número: ");
+
+            if (numero >= 0)
+            {
+                Console.WriteLine($"Resultado: {numero * numero}");
+            }
+            else
+            {
+                Console.WriteLine("Resultado: Número negativo.");
+            }
         }
     }
 }
