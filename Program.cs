@@ -30,6 +30,7 @@ namespace EjerciciosCSharp
                     case "9": Ejercicio9_FractionDifference(); break;
                     case "10": Ejercicio10_StringLength(); break;
                     case "11": Ejercicio11_AverageOfFour(); break;
+                    case "12": Ejercicio12_SmallestOfFive(); break;
                     case "0":
                         salir = true;
                         Console.WriteLine("¡Hasta luego!");
@@ -298,6 +299,20 @@ namespace EjerciciosCSharp
 
             double promedio = (n1 + n2 + n3 + n4) / 4;
             Console.WriteLine($"Resultado: {promedio}");
+        }
+
+        // 12. Smallest of Five
+        // Pide cinco números y muestra el más pequeño.
+        static void Ejercicio12_SmallestOfFive()
+        {
+            double n1 = LeerDouble("Ingrese el 1er número: ");
+            double n2 = LeerDouble("Ingrese el 2do número: ");
+            double n3 = LeerDouble("Ingrese el 3er número: ");
+            double n4 = LeerDouble("Ingrese el 4to número: ");
+            double n5 = LeerDouble("Ingrese el 5to número: ");
+
+            double menor = Math.Min(n1, Math.Min(n2, Math.Min(n3, Math.Min(n4, n5))));
+            Console.WriteLine($"Resultado: {menor}");
         }
     }
 }
